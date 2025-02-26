@@ -1,5 +1,5 @@
 // api/recipe/[id].js
-import axios from 'axios/dist/node/axios.cjs';
+const axios = require('axios');
 
 const SPOONACULAR_API_KEY = '81a43d147d234da6a68bcc52f023b0e6';
 
