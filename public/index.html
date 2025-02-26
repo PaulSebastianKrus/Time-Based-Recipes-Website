@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Based Recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cook Based on Your Time</h1>
+            <p>Find the perfect recipe for how much time you have available.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="time-filter">
+            <h2>How much time do you have?</h2>
+            <div class="slider-container">
+                <input type="range" min="5" max="180" value="30" class="slider" id="timeSlider">
+                <div class="time-display">
+                    <span id="timeValue">30</span> minutes
+                </div>
+            </div>
+            <button id="findRecipes" class="btn">Find Recipes</button>
+            
+            <div class="quick-filters">
+                <button class="filter-btn" data-time="15">Quick (15 min)</button>
+                <button class="filter-btn" data-time="30">Under 30 min</button>
+                <button class="filter-btn" data-time="60">Under 1 hour</button>
+                <button class="filter-btn" data-time="180">Slow Cook</button>
+            </div>
+        </section>
+
+        <section class="recipes-container">
+            <h2 id="resultsTitle">Recipes Ready in 30 Minutes or Less</h2>
+            <div id="recipeResults" class="recipe-grid">
+                <!-- Recipe cards will be inserted here by JavaScript -->
+                <div class="loading">Loading recipes...</div>
+            </div>
+        </section>
+        
+        <div id="recipeModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="recipeDetails"></div>
+            </div>
+        </div>
+    </main>
+
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
