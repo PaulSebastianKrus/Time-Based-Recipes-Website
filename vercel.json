@@ -20,6 +20,10 @@
         "dest": "/api/recipe.js"
       },
       {
+        "src": "/api/recipe/([0-9]+)", 
+        "dest": "/api/recipe/[id].js"  
+      },
+      {
         "src": "/(.*)",
         "dest": "/public/$1"
       }
